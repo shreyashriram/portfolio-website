@@ -1,0 +1,185 @@
+/* Global Styles */
+body {
+    line-height: 1.5;
+    scroll-behavior: smooth;
+
+    flex-direction: column;
+
+    background-color: rgb(241, 240, 239);
+    color: #333;
+    margin-left: 15%;
+    margin-right: 15%;
+
+    margin-top: 20vh;
+    margin-bottom: 20px;
+
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+  
+}
+
+a:hover {
+    text-decoration: underline;
+
+}
+
+a:visited { 
+    text-decoration: none; 
+    color:#333;
+}
+
+/* Hero Section */
+.hero {
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    
+
+    min-width: 300px;
+    max-width: 900px;
+
+    margin-bottom: 12%;
+
+}
+
+.hero-title {
+    margin: 0; /* Reset margins */
+
+    font-family: "Montserrat", Arial;
+    font-optical-sizing: auto;
+    font-weight: 700; /* Bold */
+    font-size: 36px;    
+}
+
+.hero-subtitle {
+    margin: 0; /* Reset margins */
+
+    font-family: "Montserrat", Arial;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 20px;
+
+    margin-top: 0px;
+    margin-bottom: 40px;
+}
+
+.hero-description {
+    margin: 0; /* Reset margins */
+
+    font-family: "Lato", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-size: 16px;
+
+    margin-bottom: 20px;
+}
+
+.resume-link {
+    font-weight: bold;
+
+}
+
+/* Icon Links */
+.icon-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.icon-image {
+    width: 30px;
+    height: 30px;
+    color: #333;
+    transition: transform 0.3s;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.icon-image:hover {
+    transform: scale(1.1);
+}
+
+/* Projects Section */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 100px;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.project-card {
+    width: 350px;
+}
+
+.project-image {
+    aspect-ratio: 1 / 1; /* Maintains a 1:1 square ratio */
+    width: 100%; /* Ensures the image scales with the card width */
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.image-content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire container without distortion */
+    display: block;
+}
+
+.project-title {
+    margin: 0; /* Reset margins */
+
+    font-family: "Montserrat", Arial;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: 18px;
+
+}
+
+.project-description {
+    margin: 0; /* Reset margins */
+
+    font-family: "Lato", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-size: 16px;
+
+    margin-bottom: 5px;
+}
+
+.project-link {
+    margin: 0; /* Reset margins */
+
+    font-family: "Lato", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+
+/* Footer Section */
+.Footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Footer h2 {
+    margin: 5px, 0px;
+
+    font-family: "Montserrat", Arial;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.Footer .icon-links {
+    gap: 15px;
+}
