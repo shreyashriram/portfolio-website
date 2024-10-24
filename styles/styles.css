@@ -16,11 +16,11 @@ body {
 }
 
 @media (max-width: 768px) {
-    body { margin-top: 18vh; }
+    body { margin-top: 15vh; }
 }
 
 @media (max-width: 390px) {
-    body { margin-top: 15vh; }
+    body { margin-top: 10vh; }
 }
 
 a {
