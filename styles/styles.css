@@ -20,7 +20,7 @@ body {
 }
 
 @media (max-width: 390px) {
-    body { margin-top: 10vh; }
+    body { margin-top: 5vh; }
 }
 
 a {
