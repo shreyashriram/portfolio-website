@@ -15,11 +15,12 @@ body {
 
 }
 
-/* Mobile Styles */
-@media (max-width: 768px) { /* Adjust the max-width as needed */
-    body {
-        margin-top: 15vh; /* Margin for mobile devices */
-    }
+@media (max-width: 768px) {
+    body { margin-top: 18vh; }
+}
+
+@media (max-width: 390px) {
+    body { margin-top: 15vh; }
 }
 
 a {
@@ -47,7 +48,7 @@ a:visited {
     justify-content: left;
     
 
-    min-width: 300px;
+    min-width: 250px;
     max-width: 900px;
 
     margin-bottom: 12%;
