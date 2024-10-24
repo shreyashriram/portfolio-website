@@ -15,6 +15,13 @@ body {
 
 }
 
+/* Mobile Styles */
+@media (max-width: 768px) { /* Adjust the max-width as needed */
+    body {
+        margin-top: 15vh; /* Margin for mobile devices */
+    }
+}
+
 a {
     text-decoration: none;
     color: #333;
