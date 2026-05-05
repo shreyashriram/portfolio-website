@@ -409,3 +409,176 @@ footer .social-links { justify-content: center; }
 }
 
 .next-project a:hover { color: var(--pink); border-color: var(--pink); }
+
+/* ══════════════════════════════
+   MOBILE RESPONSIVE
+══════════════════════════════ */
+@media (max-width: 768px) {
+  :root {
+    --gutter: 20%;
+  }
+
+  /* ── HOME: Hero stacks vertically ── */
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: unset;
+    padding: 60px var(--gutter) 40px;
+    gap: 32px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    order: 1;
+  }
+
+  .hero-text h1 {
+    font-size: 2.6rem;
+  }
+
+  .hero-text .subtitle,
+  .hero-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text p {
+    max-width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .hero-img-wrap {
+    order: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-img {
+    width: 220px;
+    transform: rotate(-3deg);
+  }
+
+  /* Center social links on home */
+  .hero .social-links {
+    justify-content: center;
+  }
+
+  /* ── HOME: Projects list stacks ── */
+  .projects-section {
+    padding: 60px var(--gutter);
+  }
+
+  .project-card {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+
+  /* ── HOME: Gallery stays in row but shrinks ── */
+  .gallery-section {
+    padding: 0 var(--gutter) 60px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .caption {
+    font-size: 0.72rem;
+  }
+
+  /* ── PROJECT PAGE ── */
+  .project-page-body {
+    padding: 0 var(--gutter) 60px;
+  }
+
+  /* Back button centered */
+  .back-btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 36px;
+    text-align: center;
+  }
+
+  /* Hero images: stay in row but cap height smaller */
+  .proj-hero-img {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 32px 0 24px;
+  }
+
+  .proj-hero-img img {
+    max-height: 40vh;
+    min-width: 120px;
+  }
+
+  /* When only one hero image, let it go full width */
+  .proj-hero-img img:only-child {
+    width: 100%;
+    flex: unset;
+  }
+
+  .project-page-body h1 {
+    font-size: 1.5rem;
+  }
+
+  /* Subsection images: stay in row, scroll if needed */
+  .subsection-imgs {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .subsection-imgs img {
+    flex: 1 1 140px;
+    min-width: 140px;
+    max-height: 260px;
+  }
+
+  /* When only one subsection image, full width */
+  .subsection-imgs img:only-child {
+    width: 100%;
+    flex: unset;
+    max-height: 320px;
+  }
+
+  /* Next project centered */
+  .next-project {
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Footer */
+  footer {
+    padding: 24px var(--gutter);
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 2.1rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+
+  .caption {
+    font-size: 0.65rem;
+    margin-top: 6px;
+  }
+
+  .proj-hero-img {
+    flex-direction: column;
+  }
+
+  .proj-hero-img img {
+    width: 100%;
+    max-height: 50vw;
+    flex: unset;
+  }
+}
