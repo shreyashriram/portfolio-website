@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shreya Shriram</title>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── NAV (hidden on home, transparent on project pages) ── -->
+  <!-- <nav>
+    <div class="nav-inner">
+      <span class="logo" onclick=""></span>
+    </div>
+  </nav> -->
+  <!-- ════════════════════════════
+       HOME PAGE
+  ════════════════════════════ -->
+  <div id="page-home" class="page active">
+
+    <!-- Hero: 90vh so "Projects" header just peeks -->
+    <div class="hero">
+      <div class="hero-text">
+        <h1>Hi, I'm Shreya!</h1>
+        <h2 class="subtitle">Creative technologist building to elevate storytelling.</h2>
+        <p>
+          I'm a graduate student at USC studying Creative Technologies and Multimedia Systems; with a focus on turning research into real tools: real-time rendering pipelines, 3D scene reconstruction, and generative image and video systems. 
+        </p>
+        <p>
+          While you're here, explore some of the projects I've worked on so far!
+        </p>
+        <div class="social-links">
+          <a href="mailto:sshriram@usc.edu" target="_blank">[email]</a>
+          <a href="https://www.linkedin.com/in/shreyshri/" target="_blank">[linkedin]</a>
+          <a href="https://github.com/shreyashriram" target="_blank">[github]</a>
+        </div>
+      </div>
+      <div class="hero-img-wrap">
+        <div class="hero-img">
+          <img src="assets/me.png">
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects — h2 is what peeks below hero -->
+    <section class="projects-section" id="projects">
+      <h2>Projects</h2>
+      <div id="project-list" class="project-list">
+        <!-- rendered by main.js -->
+      </div>
+    </section>
+
+    <!-- Simulation & Animation Gallery -->
+<!--     
+    <section class="gallery-section">
+      <h2>Simulation &amp; Animation</h2>
+      <div class="gallery-grid">
+          <a href="your-link-here.html" class="gallery-item">
+          <div class="gallery-item">
+            <div style="width:100%;height:100%;background:#111;display:flex;align-items:center;justify-content:center;">
+              <img src="assets/jello.gif">
+            </div>
+          </div>
+        <div class="gallery-item" style="background:#e8e4c8
+        </a;">
+          <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:left;">
+            <img src="assets/interpolation.gif">
+          </div>
+        </div>
+        <div class="gallery-item" style="background:#fff;border:1px solid #eee;">
+          <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
+            <img src="assets/2.gif">
+          </div>
+        </div>
+      </div>
+    </section>
+-->
+    <section class="gallery-section">
+      <h2>Simulation &amp; Animation</h2>
+      <div class="gallery-grid">
+        <a href="https://github.com/shreyashriram/jello-cube" target="_blank" class="gallery-item">
+          <div class="gallery-item">
+            <div class="image-wrapper">
+              <img src="assets/jello.gif">
+            </div>
+            <p class="caption">Mass-Spring Simulation</p>
+          </div>
+        </a>
+
+        <a href="https://github.com/shreyashriram/mocap-interp" target="_blank" class="gallery-item">
+          <div class="gallery-item">
+            <div class="image-wrapper">
+              <img src="assets/interp.gif">
+            </div>
+            <p class="caption">Motion Capture Interpolation</p>
+          </div>
+        </a>
+
+        <a href="https://github.com/shreyashriram/ik-skinning" target="_blank" class="gallery-item">
+          <div class="gallery-item">
+            <div class="image-wrapper">
+              <img src="assets/ik.gif">
+            </div>
+            <p class="caption">Inverse Kinematics & Skinnning</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    
+
+    <footer>
+      <h3>Stay in Touch!</h3>
+      <div class="social-links">
+        <a href="mailto:sshriram@usc.edu" target="_blank">[email]</a>
+        <a href="https://www.linkedin.com/in/shreyshri/" target="_blank">[linkedin]</a>
+        <a href="https://github.com/shreyashriram" target="_blank">[github]</a>
+      </div>
+    </footer>
+
+  </div><!-- /page-home -->
+
+
+  <!-- ════════════════════════════
+       PROJECT PAGE
+       Order: hero img → back btn → title → subtitle → links → description → subsections → images → next
+  ════════════════════════════ -->
+  <div id="page-project" class="page">
+
+    <!-- Full-bleed hero image, sits flush at top under transparent nav -->
+
+    <div class="project-page-body">
+
+      
+      <button class="back-btn" onclick="showHome()"><b>←</b> Back to projects</button>
+        <!-- <a href="index.html#projects" class="back-btn">← Back to projects</a> -->
+        
+        <div class="proj-hero-img" id="proj-hero-img">
+          <img src="assets/bunny-hero2.gif" alt="">
+        </div>
+
+        <h1 id="proj-title"></h1>
+        <p class="proj-subtitle" id="proj-subtitle"></p>
+
+        <div class="tag-links">
+          <a id="proj-code-link" target="_blank">[code]</a>
+          <a id="proj-demo-link" target="_blank">[demo]</a> 
+        </div>
+
+      <div class="proj-description">
+        <p id="proj-desc">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Donec eget mi malesuada, efficitur ante et, pulvinar dolor.
+          Nullam fermentum mi eget hendrerit cursus. Etiam ac magna
+          porta nulla volutpat fringilla. Suspendisse cursus arcu enim,
+          eu lobortis sapien suscipit sit amet.
+        </p>
+      </div>
+
+      <!-- Sub-sections (populated by JS) -->
+      <div class="proj-subsections" id="proj-subsections"></div>
+
+      <!-- Extra images -->
+      <!-- <div class="proj-images">
+        <div class="proj-img-box"></div>
+        <div class="proj-img-box"></div>
+      </div> -->
+
+      <!-- Next project link -->
+      <div class="next-project" id="next-project-link"></div>
+
+    </div>
+
+    <footer>
+      <h3>Stay in Touch!</h3>
+      <div class="social-links">
+        <a href="mailto:sshriram@usc.edu" target="_blank">[email]</a>
+        <a href="https://www.linkedin.com/in/shreyshri/" target="_blank">[linkedin]</a>
+        <a href="https://github.com/shreyashriram" target="_blank">[github]</a>
+      </div>
+    </footer>
+
+  </div><!-- /page-project -->
+
+  <script src="main.js"></script>
+</body>
+</html>
