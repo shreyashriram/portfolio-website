@@ -4,35 +4,34 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shreya Shriram</title>
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ── NAV (hidden on home, transparent on project pages) ── -->
-  <!-- <nav>
-    <div class="nav-inner">
-      <span class="logo" onclick=""></span>
-    </div>
-  </nav> -->
-  <!-- ════════════════════════════
-       HOME PAGE
-  ════════════════════════════ -->
+  <!-- Single full-page spirograph layer (scrolls with page) -->
+  <!-- <canvas id="spiro-layer"></canvas> -->
+
+  <!-- Anchor markers (positioned in flow; spirographs draw at their coords) -->
+  <div class="spiro-anchor" data-anchor="hero-right"></div>
+
+  <!-- ════════════════════════════ HOME ════════════════════════════ -->
   <div id="page-home" class="page active">
 
-    <!-- Hero: 90vh so "Projects" header just peeks -->
     <div class="hero">
       <div class="hero-text">
         <h1>Hi, I'm Shreya!</h1>
-        <h2 class="subtitle">Creative technologist building to elevate storytelling.</h2>
+        <h2 class="subtitle">Creative technologist building to <span class="underline-ink">elevate storytelling</span>.</h2>
         <p>
-          I'm a graduate student at USC studying Creative Technologies and Multimedia Systems; with a focus on turning research into real tools: real-time rendering pipelines, 3D scene reconstruction, and generative image and video systems. 
+          I'm a graduate student at USC studying Creative Technologies and Multimedia Systems; with a focus on turning research into real tools: real-time rendering pipelines, 3D scene reconstruction, and generative image and video systems.
         </p>
         <p>
           While you're here, explore some of the projects I've worked on so far!
         </p>
         <div class="social-links">
-          <a href="mailto:sshriram@usc.edu" target="_blank">[email]</a>
+          <a href="/cdn-cgi/l/email-protection#e291918a908b90838fa2979181cc878697" target="_blank">[email]</a>
           <a href="https://www.linkedin.com/in/shreyshri/" target="_blank">[linkedin]</a>
           <a href="https://github.com/shreyashriram" target="_blank">[github]</a>
         </div>
@@ -44,146 +43,161 @@
       </div>
     </div>
 
-    <!-- Projects — h2 is what peeks below hero -->
+    <div class="spiro-anchor" data-anchor="projects-top"></div>
+
     <section class="projects-section" id="projects">
-      <h2>Projects</h2>
-      <div id="project-list" class="project-list">
-        <!-- rendered by main.js -->
-      </div>
+      <h2><span class="section-pill">PROJECTS</span></h2>
+      <div id="project-list" class="project-list"></div>
     </section>
 
-    <!-- Simulation & Animation Gallery -->
-<!--     
+    <div class="spiro-anchor" data-anchor="projects-end"></div>
+
     <section class="gallery-section">
-      <h2>Simulation &amp; Animation</h2>
-      <div class="gallery-grid">
-          <a href="your-link-here.html" class="gallery-item">
-          <div class="gallery-item">
-            <div style="width:100%;height:100%;background:#111;display:flex;align-items:center;justify-content:center;">
-              <img src="assets/jello.gif">
-            </div>
-          </div>
-        <div class="gallery-item" style="background:#e8e4c8
-        </a;">
-          <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:left;">
-            <img src="assets/interpolation.gif">
-          </div>
-        </div>
-        <div class="gallery-item" style="background:#fff;border:1px solid #eee;">
-          <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
-            <img src="assets/2.gif">
-          </div>
-        </div>
-      </div>
-    </section>
--->
-    <section class="gallery-section">
-      <h2>Simulation &amp; Animation</h2>
+      <h2><span class="section-pill">SIMULATION &amp; ANIMATION</span></h2>
       <div class="gallery-grid">
         <a href="https://github.com/shreyashriram/jello-cube" target="_blank" class="gallery-item">
-          <div class="gallery-item">
-            <div class="image-wrapper">
-              <img src="assets/jello.gif">
-            </div>
-            <p class="caption">Mass-Spring Simulation</p>
-          </div>
+          <div class="image-wrapper"><img src="assets/jello.gif"></div>
+          <p class="caption">Mass-Spring Simulation</p>
         </a>
-
         <a href="https://github.com/shreyashriram/mocap-interp" target="_blank" class="gallery-item">
-          <div class="gallery-item">
-            <div class="image-wrapper">
-              <img src="assets/interp.gif">
-            </div>
-            <p class="caption">Motion Capture Interpolation</p>
-          </div>
+          <div class="image-wrapper"><img src="assets/interp.gif"></div>
+          <p class="caption">Motion Capture Interpolation</p>
         </a>
-
         <a href="https://github.com/shreyashriram/ik-skinning" target="_blank" class="gallery-item">
-          <div class="gallery-item">
-            <div class="image-wrapper">
-              <img src="assets/ik.gif">
-            </div>
-            <p class="caption">Inverse Kinematics & Skinnning</p>
-          </div>
+          <div class="image-wrapper"><img src="assets/ik.gif"></div>
+          <p class="caption">Inverse Kinematics &amp; Skinning</p>
         </a>
       </div>
     </section>
 
-    
+    <div class="spiro-anchor" data-anchor="footer-left"></div>
+    <div class="spiro-anchor" data-anchor="footer-right"></div>
 
     <footer>
       <h3>Stay in Touch!</h3>
       <div class="social-links">
-        <a href="mailto:sshriram@usc.edu" target="_blank">[email]</a>
+        <a href="/cdn-cgi/l/email-protection#acdfdfc4dec5decdc1ecd9dfcf82c9c8d9" target="_blank">[email]</a>
         <a href="https://www.linkedin.com/in/shreyshri/" target="_blank">[linkedin]</a>
         <a href="https://github.com/shreyashriram" target="_blank">[github]</a>
       </div>
     </footer>
 
-  </div><!-- /page-home -->
+  </div>
 
-
-  <!-- ════════════════════════════
-       PROJECT PAGE
-       Order: hero img → back btn → title → subtitle → links → description → subsections → images → next
-  ════════════════════════════ -->
+  <!-- ════════════════════════════ PROJECT ════════════════════════════ -->
   <div id="page-project" class="page">
 
-    <!-- Full-bleed hero image, sits flush at top under transparent nav -->
-
     <div class="project-page-body">
-
-      
       <button class="back-btn" onclick="showHome()"><b>←</b> Back to projects</button>
-        <!-- <a href="index.html#projects" class="back-btn">← Back to projects</a> -->
-        
-        <div class="proj-hero-img" id="proj-hero-img">
-          <img src="assets/bunny-hero2.gif" alt="">
-        </div>
 
-        <h1 id="proj-title"></h1>
-        <p class="proj-subtitle" id="proj-subtitle"></p>
+      <div class="proj-hero-img" id="proj-hero-img"></div>
 
-        <div class="tag-links">
-          <a id="proj-code-link" target="_blank">[code]</a>
-          <a id="proj-demo-link" target="_blank">[demo]</a> 
-        </div>
+      <h1 id="proj-title"></h1>
+      <p class="proj-subtitle" id="proj-subtitle"></p>
 
-      <div class="proj-description">
-        <p id="proj-desc">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Donec eget mi malesuada, efficitur ante et, pulvinar dolor.
-          Nullam fermentum mi eget hendrerit cursus. Etiam ac magna
-          porta nulla volutpat fringilla. Suspendisse cursus arcu enim,
-          eu lobortis sapien suscipit sit amet.
-        </p>
+      <div class="tag-links">
+        <a id="proj-code-link" target="_blank">[code]</a>
+        <a id="proj-demo-link" target="_blank">[demo]</a>
       </div>
 
-      <!-- Sub-sections (populated by JS) -->
+      <div class="proj-description">
+        <p id="proj-desc"></p>
+      </div>
+
       <div class="proj-subsections" id="proj-subsections"></div>
 
-      <!-- Extra images -->
-      <!-- <div class="proj-images">
-        <div class="proj-img-box"></div>
-        <div class="proj-img-box"></div>
-      </div> -->
-
-      <!-- Next project link -->
       <div class="next-project" id="next-project-link"></div>
-
     </div>
 
     <footer>
       <h3>Stay in Touch!</h3>
       <div class="social-links">
-        <a href="mailto:sshriram@usc.edu" target="_blank">[email]</a>
+        <a href="/cdn-cgi/l/email-protection#86f5f5eef4eff4e7ebc6f3f5e5a8e3e2f3" target="_blank">[email]</a>
         <a href="https://www.linkedin.com/in/shreyshri/" target="_blank">[linkedin]</a>
         <a href="https://github.com/shreyashriram" target="_blank">[github]</a>
       </div>
     </footer>
 
-  </div><!-- /page-project -->
+  </div>
 
+  <!-- Tweaks panel (vanilla, host postMessage protocol) -->
+  <div id="tweaks-panel" hidden>
+    <div class="tw-header">
+      <span>Tweaks</span>
+      <button id="tw-close" aria-label="Close">×</button>
+    </div>
+    <div class="tw-body">
+      <label class="tw-row">
+        <span>Corner spirographs</span>
+        <input type="checkbox" id="tw-corners" checked>
+      </label>
+      <label class="tw-row">
+        <span>Spirograph opacity</span>
+        <input type="range" id="tw-opacity" min="0" max="1" step="0.05" value="0.65">
+      </label>
+      <label class="tw-row">
+        <span>Spirograph size</span>
+        <input type="range" id="tw-size" min="160" max="520" step="10" value="360">
+      </label>
+      <div class="tw-row tw-radio">
+        <span>Ink palette</span>
+        <div>
+          <button data-color="all" class="tw-swatch tw-swatch-all" title="all inks"></button>
+          <button data-color="#2d3a8c" class="tw-swatch" style="background:#2d3a8c" title="blue"></button>
+          <button data-color="#a8231f" class="tw-swatch" style="background:#a8231f" title="red"></button>
+          <button data-color="#2a6b3d" class="tw-swatch" style="background:#2a6b3d" title="green"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+      "showCorners": true,
+      "spiroOpacity": 0.15,
+      "spiroSize": 360,
+      "inkColor": "all"
+    }/*EDITMODE-END*/;
+    window.__TWEAKS = { ...TWEAK_DEFAULTS };
+
+    function applyTweaks(t) {
+      if (window.__applySpiroTweaks) window.__applySpiroTweaks(t);
+    }
+    applyTweaks(window.__TWEAKS);
+
+    const panel = document.getElementById('tweaks-panel');
+    const cornersEl = document.getElementById('tw-corners');
+    const opacityEl = document.getElementById('tw-opacity');
+    const sizeEl = document.getElementById('tw-size');
+    cornersEl.checked = window.__TWEAKS.showCorners;
+    opacityEl.value = window.__TWEAKS.spiroOpacity;
+    sizeEl.value = window.__TWEAKS.spiroSize;
+
+    function persist(edits) {
+      Object.assign(window.__TWEAKS, edits);
+      applyTweaks(window.__TWEAKS);
+      try { window.parent.postMessage({type:'__edit_mode_set_keys', edits}, '*'); } catch(e){}
+    }
+    cornersEl.addEventListener('change', () => persist({ showCorners: cornersEl.checked }));
+    opacityEl.addEventListener('input', () => persist({ spiroOpacity: parseFloat(opacityEl.value) }));
+    sizeEl.addEventListener('input', () => persist({ spiroSize: parseInt(sizeEl.value) }));
+    document.querySelectorAll('.tw-swatch').forEach(b => {
+      b.addEventListener('click', () => persist({ inkColor: b.dataset.color }));
+    });
+
+    window.addEventListener('message', (e) => {
+      const d = e.data || {};
+      if (d.type === '__activate_edit_mode') panel.hidden = false;
+      if (d.type === '__deactivate_edit_mode') panel.hidden = true;
+    });
+    document.getElementById('tw-close').addEventListener('click', () => {
+      panel.hidden = true;
+      try { window.parent.postMessage({type:'__edit_mode_dismissed'}, '*'); } catch(e){}
+    });
+    try { window.parent.postMessage({type:'__edit_mode_available'}, '*'); } catch(e){}
+  </script>
+
+  <script src="spirograph.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
